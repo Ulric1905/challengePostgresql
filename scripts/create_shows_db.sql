@@ -16,7 +16,7 @@ CREATE TABLE shows (
 show_id serial PRIMARY KEY,
 name VARCHAR,
 description VARCHAR,
-release_year INTEGER,
+release_year INTEGER CHECK (1000 < release_year AND release_year < 9999),
 genres VARCHAR,
 network VARCHAR
 );
